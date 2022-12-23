@@ -1,1 +1,0 @@
-copy interesting_sentences.txt to this folder, then run clean_data and generate_stimuli
