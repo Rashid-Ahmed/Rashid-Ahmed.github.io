@@ -25,8 +25,8 @@ table {
 	/*all elements in a slide will be centered by default*/
     text-align: center;
 
-    width: 800px;
-    height: 800px;
+    width: 850px;
+    height: 825px;
 
     /*could explicitly set the following, but these are the defaults for me (chrome, linux)*/
     font-size: 20px;

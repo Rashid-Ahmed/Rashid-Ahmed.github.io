@@ -14,8 +14,8 @@
     <script src="shared/js/exp-V2.js"></script>
     <script src="shared/js/stream-V2.js"></script>
 
-    <!-- utilities to submit data to proliferate -->
-    <script src="https://proliferate.alps.science/static/js/proliferate.js" type="text/javascript"></script>
+    <!-- utilities to submit data to mturk -->
+    <script src="shared/js/mmturkey.js"></script>
 
     <!-- general utilities -->
     <script src="shared/js/browserCheck.js"></script>
@@ -40,7 +40,7 @@
       <p class="left">
         <strong>Your task is to read the sentences and answer the questions about what you read to the best of your ability.</strong><br>
         <br>
-        The survey will take approximately 7 minutes.
+        The survey will take approximately 10 minutes.
       </p><button id="start_button" type="button">Start experiment</button>
       <p class="left legal">
         <strong><br>
@@ -63,16 +63,16 @@
       <p class="targetSen"><strong>Statement:</strong> Turkeys are not native to France. </p>
 
       <div class="instruction center">
-        <i>Adjust the slider to indicate how likely you think the statement is to be true?</i>
+        <i>Adjust the slider to indicate how likely you think it is that someone reading the text would believe the statement to be true?</i>
       </div>
 
       <table>
         <tr>
-          <td>impossible</td>
+          <td>very unlikely</td>
           <td>
               <span id="practice_1-slider" style="display:block; width:350px; margin: 0 20px"></span>
           </td>
-          <td>certain</td>
+          <td>very likely</td>
         </tr>
         <tr>
           <td></td>
@@ -95,7 +95,7 @@
       <div class="err incorrect-val-err">
         <p>
           The text states that Turkeys originated in Africa, so they are indeed not native to France
-          and it is certain that the statement above is true. <br> Please indicate this by assigning a very high (greater than 99%) value.
+          and it is very likely that the statement above is true. <br> Please indicate this by assigning a very high (greater than 99%) value.
         </p>
       </div>
 
@@ -114,16 +114,16 @@
       <p class="targetSen"><strong>Statement:</strong>At the time of his announcement, Mulroney's approval rating was the highest of any prime minister in the last 50 years.</p>
 
       <div class="instruction center">
-        <i>Adjust the slider to indicate how likely you think the statement is to be true?</i>
+        <i>Adjust the slider to indicate how likely you think it is that someone reading the text would believe the statement to be true?</i>
       </div>
 
       <table>
         <tr>
-          <td>impossible</td>
+          <td>very unlikely</td>
           <td>
               <span id="practice_2-slider" style="display:block; width:350px; margin: 0 20px"></span>
           </td>
-          <td>certain</td>
+          <td>very likely</td>
         </tr>
         <tr>
           <td></td>
@@ -180,16 +180,16 @@
       <p class="targetSen"><strong>Statement:</strong>The new system will actually be more reliable than earlier systems.</p>
 
       <div class="instruction center">
-        <i>Adjust the slider to indicate how likely you think the statement is to be true?</i>
+        <i>Adjust the slider to indicate how likely you think it is that someone reading the text would believe the statement to be true?</i>
       </div>
 
       <table>
         <tr>
-          <td>impossible</td>
+          <td>very unlikely</td>
           <td>
               <span id="practice_3-slider" style="display:block; width:350px; margin: 0 20px"></span>
           </td>
-          <td>certain</td>
+          <td>very likely</td>
         </tr>
         <tr>
           <td></td>
@@ -212,13 +212,13 @@
 
       <div class="err incorrect-val-err1">
         <p>
-          Based on the information in the text, it is not certain that the new system will actually be more reliable than earlier systems.
+          Based on the information in the text, it is not very likely that the new system will actually be more reliable than earlier systems.
           <br> Please indicate this by assigning a value of less than 100%.
         </p>
       </div>
       <div class="err incorrect-val-err2">
         <p>
-            Based on the information in the text, it is not impossible that the new system will actually be more reliable than earlier systems.
+            Based on the information in the text, it is not very unlikely that the new system will actually be more reliable than earlier systems.
           <br> Please indicate this by assigning a <strong>non-zero</strong> value.
         </p>
       </div>
@@ -235,9 +235,8 @@
     <div class="slide" id="startExp">
       <h3>Instructions</h3>
       <p id="instruct-text" class="left">
-        This task will involve reading a few lines from an unfamiliar text followed by a statement.
-        Indicate how likely you think the statement is to be true,
-        using the information in the text and your background knowledge about how the world works.
+        This task will involve reading a few lines of a text followed by a statement. Please indicate how likely you think
+        it is that someone reading the text would believe the statement to be true, using the information in the text and your background knowledge about how the world works.
       </p>
 
       <p>Before starting the experiment, you will complete 3 practice rounds to become familiar with the task.</p>
@@ -251,9 +250,8 @@
       
       <h3>Instructions</h3>
       <p>
-         This task will involve reading a few lines of a text followed by a statement. Please indicate how likely you think the statement is to be true, using the information in the text and your background knowledge
-         about how the world works.</p>
-      <p>Sometimes, the text or the statement might sound strange. In this case, give a rating to the best of your ability, but also click the checkbox next to "The text is confusing" and please tell us why it is confusing.</p>
+        This task will involve reading a few lines of a text followed by a statement. Please indicate how likely you think
+        it is that someone reading the text would believe the statement to be true, using the information in the text and your background knowledge about how the world works.</p>
 
       <div class="center">
         <button class="continueButton" onclick="_s.button()">Continue</button>
@@ -273,16 +271,16 @@
         <strong>Statement:</strong> <span id="trial-statement">{{statement}}</span>
       </p>
       <div class="instruction center">
-        <i>Adjust the slider to indicate how likely you think the statement is to be true?</i>
+        <i>Adjust the slider to indicate how likely you think it is that someone reading the text would believe the statement to be true?</i>
       </div>
 
       <table>
         <tr>
-          <td>impossible</td>
+          <td>very unlikely</td>
           <td>
               <span id="trial-slider" style="display:block; width:350px; margin: 0 20px"></span>
           </td>
-          <td>certain</td>
+          <td>very likely</td>
         </tr>
         <tr>
           <td></td>
