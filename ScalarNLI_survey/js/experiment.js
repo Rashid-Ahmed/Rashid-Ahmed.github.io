@@ -318,7 +318,7 @@ exp.trials = [];
 exp.catch_trials = [];
 var stimuli = all_stims;
 
-exp.stimuli = _.shuffle(stimuli); //call _.shuffle(stimuli) to randomize the order;
+//exp.stimuli = _.shuffle(stimuli); //call _.shuffle(stimuli) to randomize the order;
 exp.n_trials = exp.stimuli.length;
 
 exp.condition = LIST; //can randomize between subjects conditions here
